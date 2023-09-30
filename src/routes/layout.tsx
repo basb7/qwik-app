@@ -3,7 +3,8 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
 import Header from "~/components/starter/header/header";
-import Footer from "~/components/starter/footer/footer";
+import Flores from "~/media/flores.webp";
+
 
 import styles from "./styles.css?inline";
 
@@ -27,12 +28,15 @@ export const useServerTimeLoader = routeLoader$(() => {
 export default component$(() => {
   useStyles$(styles);
   return (
-    <>
+    <div class="pt-10">
+      <div role="presentation" class="border-[#DEAB69] border-4 rotate-2 h-[90%] w-[90%] absolute top-10 left-5 md:top-16 md:left-28 -z-10"></div>
+      <div role="presentation" class="border-[#ECC893]  border-4 -rotate-2 h-[90%] w-[90%] absolute top-10 left-5 md:top-16 md:left-28 -z-10"></div>
+      <img src={Flores} alt="bg-Flores" width={230} height={400} class="absolute bottom-0 left-0" />
+      <img src={Flores} alt="bg-Flores" width={230} height={400} class="absolute top-0 right-0 rotate-180" />
       <Header />
       <main>
         <Slot />
       </main>
-      <Footer />
-    </>
+    </div>
   );
 });
