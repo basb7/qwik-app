@@ -41,7 +41,7 @@ export default component$(() => {
 
   return (
     <>
-      <div id="contador" class="dark:text-white text-center mt-10">
+      <div id="contador" class="text-center mt-10">
         <div class="flex gap-4 justify-center">
           <div>
             <span class="text-green-600 font-medium text-5xl" id="dias">{Dias}</span>
