@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import CounterTime from "~/components/starter/counter-time/counterTime";
 import Multimedia from "~/components/starter/multimedia/multimedia";
 import Form from "~/components/starter/form/form";
+import { Maps } from "~/components/starter/maps/maps";
 
 
 export default component$(() => {
@@ -11,6 +12,7 @@ export default component$(() => {
       <CounterTime />
       <Multimedia />
       <Form />
+      <Maps />
     </section>
   );
 });
@@ -20,7 +22,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Página para la confirmacion de asistencia, información relevante al evento",
     },
   ],
 };
