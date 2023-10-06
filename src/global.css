@@ -6,6 +6,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Cookie';
+  /* Asigna un nombre a tu fuente */
+  src: url('/fonts/Cookie-Regular.ttf') format('truetype');
+  /* Ruta a la fuente descargada */
+  /* Puedes agregar más formatos si tienes diferentes versiones de la fuente (por ejemplo, woff, woff2, etc.) */
+}
+
 /**
  * WHAT IS THIS FILE?
  *
