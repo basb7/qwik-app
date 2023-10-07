@@ -13,7 +13,7 @@ export default component$(() => {
 
   useTask$(({ track }) => {
     track(() => inputCode.value);
-    console.log(inputCode.value)
+    
     if (inputCode.value.length > 4) {
       helperText.value = 'Solo se permiten 4 digitos. Ej: 4563'
     }
@@ -48,7 +48,7 @@ export default component$(() => {
 
   return (
     <section>
-      <button onClick$={handleSetShowModal} class="mt-3 mx-auto block text- text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-[#DEAB69] font-medium rounded text-lg px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800" type="button">
+      <button onClick$={handleSetShowModal} class="mt-6 mx-auto block md:text-4xl text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-[#DEAB69] font-medium rounded text-lg px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 tracking-wide" type="button">
         Confirmar asistencia
       </button>
 
