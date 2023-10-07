@@ -1,13 +1,11 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
-import { routeLoader$ } from "@builder.io/qwik-city";
-import type { RequestHandler } from "@builder.io/qwik-city";
-import { routeAction$ } from '@builder.io/qwik-city';
+import { routeLoader$, routeAction$, type RequestHandler } from "@builder.io/qwik-city";
 
 import Header from "~/components/starter/header/header";
 
-
 import styles from "./styles.css?inline";
 import { URL } from "~/config";
+
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -29,9 +27,9 @@ export interface ResponseAPI {
   asistente: Asistente
 }
 
-export const useSendPost = routeAction$(async (data) => {
+export const useSendPost = routeAction$(async (data, requestEvent) => {
   try {
-    const response = await fetch(URL, {
+    const response = await fetch(requestEvent.env.get('URL_API') ?? URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

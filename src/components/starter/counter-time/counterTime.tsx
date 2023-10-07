@@ -42,22 +42,22 @@ export default component$(() => {
   return (
     <>
       <div id="contador" class="text-center mt-10">
-        <div class="flex gap-4 justify-center">
+        <div class="flex gap-4 md:gap-8 justify-center">
           <div>
-            <span class="text-green-600 font-medium text-5xl" id="dias">{Dias}</span>
-            <p class="text-center">Días</p>
+            <span class="text-green-600 font-medium text-5xl md:text-9xl" id="dias">{Dias}</span>
+            <p class="text-center md:text-4xl">Días</p>
           </div>
           <div>
-            <span class="text-green-600 font-medium text-5xl" id="horas">{Horas}</span>
-            <p class="text-center">Horas</p>
+            <span class="text-green-600 font-medium text-5xl md:text-9xl" id="horas">{Horas}</span>
+            <p class="text-center md:text-4xl">Horas</p>
           </div>
           <div>
-            <span class="text-green-600 font-medium text-5xl" id="minutos">{Minutos}</span>
-            <p class="text-center">Minutos</p>
+            <span class="text-green-600 font-medium text-5xl md:text-9xl" id="minutos">{Minutos}</span>
+            <p class="text-center md:text-4xl">Minutos</p>
           </div>
           <div>
-            <span class="text-green-600 font-medium text-5xl" id="segundos">{Segundos}</span>
-            <p class="text-center">Segundos</p>
+            <span class="text-green-600 font-medium text-5xl md:text-9xl" id="segundos">{Segundos}</span>
+            <p class="text-center md:text-4xl">Segundos</p>
           </div>
         </div>
       </div>
