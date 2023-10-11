@@ -27,6 +27,8 @@ export interface ResponseAPI {
 }
 
 export const useSendPost = routeAction$(async (data, requestEvent) => {
+  console.log(requestEvent.env.get('URL_API'))
+
   try {
     const response = await fetch(requestEvent.env.get('URL_API') ?? URL, {
       method: 'POST',
@@ -35,7 +37,7 @@ export const useSendPost = routeAction$(async (data, requestEvent) => {
       },
       body: JSON.stringify(data)
     })
-    
+    console.log(response)
     const responseAPI: ResponseAPI = await response.json()
     
     return {
