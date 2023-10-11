@@ -96,6 +96,7 @@ export default component$(() => {
     } else {
       showModalSuccess.value = !showModalSuccess.value;
       notificationText.value = data.value?.responseAPI.message ?? '';
+      console.log(data.value?.responseAPI)
     }
   });
 
