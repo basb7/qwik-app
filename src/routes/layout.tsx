@@ -18,13 +18,12 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
-export interface Asistente {
-  codigo: string
-}
 
 export interface ResponseAPI {
   status: string,
-  asistente: Asistente
+  user: string,
+  code: number,
+  message: string
 }
 
 export const useSendPost = routeAction$(async (data, requestEvent) => {
@@ -38,7 +37,7 @@ export const useSendPost = routeAction$(async (data, requestEvent) => {
     })
     
     const responseAPI: ResponseAPI = await response.json()
-
+    
     return {
       responseAPI
     }
