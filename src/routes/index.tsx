@@ -4,6 +4,7 @@ import CounterTime from "~/components/starter/counter-time/counterTime";
 import Multimedia from "~/components/starter/multimedia/multimedia";
 import Form from "~/components/starter/form/form";
 import { Information } from "~/components/starter/information/information";
+import ImageOG from "../../public/og:image.png"
 
 
 export default component$(() => {
@@ -22,7 +23,23 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Página para la confirmación de asistencia, información relevante al evento",
+      content: "Página para la confirmación de asistencia, información relevante al evento"
     },
+    {
+      property: "og:title",
+      content: "Boda B&J"
+    },
+    {
+      property: "og:type",
+      content: "Website"
+    },
+    {
+      property: "og:image",
+      content: `${ImageOG}`
+    },
+    {
+      property: "og:url",
+      content: "https://invitacion-boda-byj.netlify.app/"
+    }
   ],
 };
