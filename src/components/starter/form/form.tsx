@@ -125,7 +125,7 @@ export default component$(() => {
                   <h3 class="mb-4 pt-10 text-3xl font-medium text-gray-900 dark:text-white">Ingresa el código de verificación</h3>
                   <Form class="space-y-6" action={data} onSubmitCompleted$={handleSubmitComplite}>
                     <div>
-                      <label for="number" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Código de 4 digitos</label>
+                      <label for="number" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white">Código de 3 digitos</label>
                       <input bind:value={inputCode} min={0} max={999} type="number" name="codigo" id="number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm roundedfocus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="123" required />
                       <p class="text-red-600">{helperText.value}</p>
                     </div>
