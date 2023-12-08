@@ -4,7 +4,7 @@ export const Information = component$(() => {
   return (
     <>
       <section class="mx-auto w-[80%] md:w-[80%] my-5 md:grid md:grid-cols-2 text-center justify-center md:border-yellow-600 md:border-4 md:rounded">
-        <div class="md:border-yellow-600 md:border-l-4">
+        <div class="md:border-yellow-600 md:border-r-4">
           <h3 class="text-3xl md:text-6xl text-center py-3">Información del evento</h3>
           <div class="px-3 my-auto text-center text-3xl md:text-5xl h-[390px] flex flex-col justify-center">
             <p class="text-yellow-700">Hora: <span class="text-black">15:00</span></p>
@@ -12,7 +12,9 @@ export const Information = component$(() => {
             <p class="text-yellow-700">Dirección: <span class="text-black">La Calera #5 Km 4, Usaquén, Bogotá, Cundinamarca (Valle Arriba)</span></p>
             <p class="text-yellow-700">Vestido: <span class="text-black">Formal</span></p>
             <p class="text-yellow-700">Disponibilidad de parqueadero: <span class="text-black">Sí</span></p>
-            <p class="text-yellow-700 text-4xl md:text-7xl font-medium pt-8">¡Lluvia de sobres!</p>
+            <div class="border-l-8 border-r-8 border border-[#DEAB69] shadow-xl mt-9 md:mt-2">
+              <p class="text-yellow-700 text-4xl md:text-7xl font-medium">¡Lluvia de sobres!</p>
+            </div>
           </div>
         </div>
         <div class="h-full">

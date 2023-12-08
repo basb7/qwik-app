@@ -27,7 +27,6 @@ export interface ResponseAPI {
 }
 
 export const useSendPost = routeAction$(async (data, requestEvent) => {
-  console.log(requestEvent.env.get('URL_API'))
 
   try {
     const response = await fetch(requestEvent.env.get('URL_API') ?? URL, {
@@ -39,7 +38,7 @@ export const useSendPost = routeAction$(async (data, requestEvent) => {
     })
     console.log(response)
     const responseAPI: ResponseAPI = await response.json()
-    
+
     return {
       responseAPI
     }
@@ -59,7 +58,7 @@ export default component$(() => {
   useStyles$(styles);
   return (
     <div class="pt-10">
-      
+
       <Header />
       <main>
         <Slot />
