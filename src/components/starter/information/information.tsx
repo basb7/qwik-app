@@ -12,7 +12,7 @@ export const Information = component$(() => {
             <p class="text-yellow-700">Dirección: <span class="text-black">La Calera #5 Km 4, Usaquén, Bogotá, Cundinamarca (Valle Arriba)</span></p>
             <p class="text-yellow-700">Vestido: <span class="text-black">Formal</span></p>
             <p class="text-yellow-700">Disponibilidad de parqueadero: <span class="text-black">Sí</span></p>
-            <p class="text-yellow-700 text-4xl md:text-7xl font-medium pt-16">¡Lluvia de sobres!</p>
+            <p class="text-yellow-700 text-4xl md:text-7xl font-medium pt-8">¡Lluvia de sobres!</p>
           </div>
         </div>
         <div class="h-full">
