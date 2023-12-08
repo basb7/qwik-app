@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$, $ } from "@builder.io/qwik";
 
 export default component$(() => {
 
@@ -7,12 +7,65 @@ export default component$(() => {
   const Minutos = useSignal('00')
   const Segundos = useSignal('00')
 
+  const startConfetti = $(async () => {
+    const defaults = {
+      spread: 360,
+      ticks: 70,
+      gravity: 0,
+      decay: 0.95,
+      startVelocity: 30,
+      colors: ["006ce9", "ac7ff4", "18b6f6", "713fc2", "ffffff"],
+      origin: {
+        x: 0.5,
+        y: 0.35,
+      },
+    };
+
+    function loadConfetti() {
+      return new Promise<(opts: any) => void>((resolve, reject) => {
+        if ((globalThis as any).confetti) {
+          return resolve((globalThis as any).confetti as any);
+        }
+        const script = document.createElement("script");
+        script.src =
+          "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
+        script.onload = () =>
+          resolve((globalThis as any).confetti as any);
+        script.onerror = reject;
+        document.head.appendChild(script);
+        script.remove();
+      });
+    }
+
+    const confetti = await loadConfetti();
+
+    function shoot() {
+      confetti({
+        ...defaults,
+        particleCount: 80,
+        scalar: 1.2,
+      });
+
+      confetti({
+        ...defaults,
+        particleCount: 60,
+        scalar: 0.75,
+      });
+    }
+
+    setTimeout(shoot, 0);
+    setTimeout(shoot, 100);
+    setTimeout(shoot, 200);
+    setTimeout(shoot, 300);
+    setTimeout(shoot, 400);
+  })
+
   useVisibleTask$(({ cleanup }) => {
     const id = setInterval(() => {
       // Fecha de finalización (por ejemplo, 31 de diciembre de 2023 a las 23:59:59)
-      const fechaFinalizacion = new Date("2024-01-20T15:00:00").getTime();
+      const fechaFinalizacion = new Date("2024-02-04T00:00:00").getTime();
 
-        // Función para actualizar el contador regresivo
+      // Función para actualizar el contador regresivo
       const fechaActual = new Date().getTime();
       const tiempoRestante = fechaFinalizacion - fechaActual;
 
@@ -31,7 +84,14 @@ export default component$(() => {
         // Si la fecha final ya ha pasado, mostrar un mensaje o realizar alguna acción
         const elementContador = document.getElementById("contador");
         if (elementContador) {
-          elementContador.textContent = "El contador ha terminado";
+
+          const html = `<div>
+                          <span class="text-green-600 font-medium text-4xl md:text-9xl">¡Hoy es el gran día <br/> en donde dos almas se juntan! <br /> 🤵🏻💓 👰🏻‍♀️</span>
+                        </div>`
+
+          elementContador.innerHTML = html
+
+          startConfetti()
         }
       }
     }, 1000);
