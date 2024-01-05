@@ -36,7 +36,7 @@ export const useSendPost = routeAction$(async (data, requestEvent) => {
       },
       body: JSON.stringify(data)
     })
-    console.log(response)
+
     const responseAPI: ResponseAPI = await response.json()
 
     return {

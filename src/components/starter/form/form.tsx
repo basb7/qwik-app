@@ -95,7 +95,7 @@ export default component$(() => {
       startConfetti()
     } else {
       showModalSuccess.value = !showModalSuccess.value;
-      notificationText.value = data.value?.responseAPI.message ?? '';
+      notificationText.value = data.value?.responseAPI.message ?? 'Error al confirmar, intente nuevamente en unos minutos';
     }
   });
 
