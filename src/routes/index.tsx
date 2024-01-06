@@ -4,7 +4,6 @@ import CounterTime from "~/components/starter/counter-time/counterTime";
 import Multimedia from "~/components/starter/multimedia/multimedia";
 import Form from "~/components/starter/form/form";
 import { Information } from "~/components/starter/information/information";
-import ImageOG from "/og:image.png"
 
 
 export default component$(() => {
@@ -35,7 +34,8 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: `${ImageOG}`
+      content: 'https://invitacion-boda-byj.netlify.app/build/q-19098a42.png',
+
     },
     {
       property: "og:url",
