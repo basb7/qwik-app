@@ -61,5 +61,33 @@ export const head: DocumentHead = {
       property: "og:description",
       content: "Página para la confirmación de asistencia, información relevante al evento"
     },
+    {
+      name: "twitter:card",
+      content: "summary_large_image"
+    },
+    {
+      property: "twitter:title",
+      content: "Boda B&J"
+    },
+    {
+      property: "twitter:description",
+      content: "Página para la confirmación de asistencia, información relevante al evento"
+    },
+    {
+      property: "twitter:image",
+      content: `${ImageOG}`
+    },
+    {
+      property: "twitter:image:alt",
+      content: "Boda B&J"
+    },
+    {
+      property: "twitter:url",
+      content: "https://invitacion-boda-byj.netlify.app/"
+    },
+    {
+      property: "twitter:domain",
+      content: "invitacion-boda-byj.netlify.app"
+    }
   ],
 };
