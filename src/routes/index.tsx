@@ -4,7 +4,7 @@ import CounterTime from "~/components/starter/counter-time/counterTime";
 import Multimedia from "~/components/starter/multimedia/multimedia";
 import Form from "~/components/starter/form/form";
 import { Information } from "~/components/starter/information/information";
-import ImageOG from "../../public/og:image.png"
+// import ImageOG from "../../public/og:image.png"
 
 
 export default component$(() => {
