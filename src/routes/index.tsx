@@ -4,7 +4,7 @@ import CounterTime from "~/components/starter/counter-time/counterTime";
 import Multimedia from "~/components/starter/multimedia/multimedia";
 import Form from "~/components/starter/form/form";
 import { Information } from "~/components/starter/information/information";
-import ImageOG from "/og:image.png"
+import ImageOG from "/og:image.jpg"
 
 
 export default component$(() => {
@@ -38,8 +38,28 @@ export const head: DocumentHead = {
       content: `${ImageOG}`
     },
     {
+      property: "og:image:type",
+      content: "image/jpeg"
+    },
+    {
+      property: "og:image:width",
+      content: "400"
+    },
+    {
+      property: "og:image:height",
+      content: "868"
+    },
+    {
+      property: "og:image:alt",
+      content: "Boda B&J"
+    },
+    {
       property: "og:url",
       content: "https://invitacion-boda-byj.netlify.app/"
-    }
+    },
+    {
+      property: "og:description",
+      content: "Página para la confirmación de asistencia, información relevante al evento"
+    },
   ],
 };
