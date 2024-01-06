@@ -35,7 +35,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: `${ImageOG}`
+      content: `https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/invitacion-boda-byj.netlify.app/Boda%20B%26J/https%3A%2F%2Finvitacion-boda-byj.netlify.app%2Fbuild%2Fq-19098a42.png/og.png`
     },
     {
       property: "og:image:type",
@@ -43,11 +43,11 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image:width",
-      content: "400"
+      content: "1200"
     },
     {
       property: "og:image:height",
-      content: "868"
+      content: "630"
     },
     {
       property: "og:image:alt",
@@ -75,7 +75,7 @@ export const head: DocumentHead = {
     },
     {
       property: "twitter:image",
-      content: `${ImageOG}`
+      content: `https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/invitacion-boda-byj.netlify.app/Boda%20B%26J/https%3A%2F%2Finvitacion-boda-byj.netlify.app%2Fbuild%2Fq-19098a42.png/og.png`
     },
     {
       property: "twitter:image:alt",
