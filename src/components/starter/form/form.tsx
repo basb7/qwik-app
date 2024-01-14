@@ -105,7 +105,7 @@ export default component$(() => {
   })
 
   return (
-    <section>
+    <section class="hidden">
       <button onClick$={handleSetShowModal} class="mt-6 mx-auto block md:text-4xl text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-[#DEAB69] font-medium rounded text-2xl px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 tracking-wide" type="button">
         Confirmar asistencia
       </button>
